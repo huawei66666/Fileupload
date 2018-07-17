@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+        version="2.0">
+
+    <description>JSTL 1.1 functions library</description>
+    <display-name>JSTL functions sys</display-name>
+    <tlib-version>1.1</tlib-version>
+    <short-name>fns</short-name>
+    <uri>http://java.sun.com/jsp/jstl/functionss</uri>
+
+    <!-- DateUtils -->
+    <function>
+        <description>获取当前日期</description>
+        <name>getDate</name>
+        <function-class>com.huawei.utils.DateUtils</function-class>
+        <function-signature>java.lang.String getDate(java.lang.String)</function-signature>
+        <example>${fns:getDate(pattern)}</example>
+    </function>
+    <function>
+        <description>获取过去的天数</description>
+        <name>pastDays</name>
+        <function-class>com.huawei.utils.DateUtils</function-class>
+        <function-signature>long pastDays(java.util.Date)</function-signature>
+        <example>${fns:pastDays(date)}</example>
+    </function>
+    <function>
+        <description>获得耗时</description>
+        <name>getElapsedTime</name>
+        <function-class>com.huawei.utils.DateUtils</function-class>
+        <function-signature>java.lang.String getElapsedTime(java.util.Date, java.util.Date)</function-signature>
+        <example>${fns:getElapsedTime(startDate, endDate)}</example>
+    </function>
+    <function>
+        <description>获得 剩余天数</description>
+        <name>getSurplusDay</name>
+        <function-class>com.huawei.utils.DateUtils</function-class>
+        <function-signature>int getSurplusDay(java.util.Date)</function-signature>
+        <example>${fns:getSurplusDay(endDate)}</example>
+    </function>
+    <function>
+        <description>时间戳转化为jsp页面字符串, 转换格式（yyyy-MM-dd HH:mm:ss）</description>
+        <name>formatTimestamp</name>
+        <function-class>com.huawei.utils.DateUtils</function-class>
+        <function-signature>java.lang.String formatTimestamp(java.lang.Long)</function-signature>
+        <example>${fns:formatTimestamp(long)}</example>
+    </function>
+    <function>
+        <description>获取系统当前时间戳</description>
+        <name>getSysTime</name>
+        <function-class>com.huawei.utils.DateUtils</function-class>
+        <function-signature>java.lang.Long getSysTime(java.lang.String)</function-signature>
+        <example>${fns:getSysTime()}</example>
+    </function>
+
+</taglib>

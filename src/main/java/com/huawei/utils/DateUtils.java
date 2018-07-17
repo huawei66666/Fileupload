@@ -3,6 +3,7 @@ package com.huawei.utils;
 import org.apache.commons.lang3.time.DateFormatUtils;
 
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -465,6 +466,23 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
         a.roll(Calendar.DATE, -1);
         int maxDate = a.get(Calendar.DATE);
         return maxDate;
+    }
+
+    /**
+     * 获取系统当前时间戳
+     *
+     * @param pattern
+     * @return
+     */
+    public static Long getSysTime(String pattern) {
+        try {
+            pattern = StringUtils.isEmpty(pattern) ? "yyyy-MM-dd HH:mm:ss" : pattern;
+            SimpleDateFormat sdf = new SimpleDateFormat(pattern);
+            Calendar c = Calendar.getInstance();
+            return sdf.parse(sdf.format(c.getTime())).getTime();
+        } catch (Exception e) {
+        }
+        return null;
     }
 
 

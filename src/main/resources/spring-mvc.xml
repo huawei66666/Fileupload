@@ -35,9 +35,10 @@
     <mvc:default-servlet-handler/>
 
     <!-- 上传文件拦截，设置最大上传文件大小   10M=10*1024*1024(B)=10485760 bytes -->
-    <!--<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-        <property name="maxUploadSize" value="${web.maxUploadSize}" />
-    </bean>-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="1024000" />
+        <property name="defaultEncoding" value="utf-8"/><!--属性：编码-->
+    </bean>
 
     <!-- REST中根据URL后缀自动判定Content-Type及相应的View -->
     <bean id="contentNegotiationManager" class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">

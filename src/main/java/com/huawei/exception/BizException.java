@@ -1,4 +1,4 @@
-package com.huawei.utils;
+package com.huawei.exception;
 
 /**
  * <p>Project:			<p>

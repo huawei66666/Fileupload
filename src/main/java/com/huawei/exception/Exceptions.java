@@ -1,4 +1,4 @@
-package com.huawei.utils;
+package com.huawei.exception;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.PrintWriter;

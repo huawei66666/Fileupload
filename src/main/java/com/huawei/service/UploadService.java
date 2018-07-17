@@ -1,7 +1,7 @@
 package com.huawei.service;
 
 import com.huawei.bean.ResourceDatabaseBo;
-import com.huawei.utils.BizException;
+import com.huawei.exception.BizException;
 import com.huawei.utils.ImportExcel;
 import com.huawei.utils.StringUtils;
 import org.apache.commons.collections.CollectionUtils;
